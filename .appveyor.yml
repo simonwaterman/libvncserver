@@ -19,5 +19,5 @@ install:
 build_script:
   - mkdir build
   - cd build 
-  - cmake ..
+  - cmake .. -DZLIB_ROOT=../deps/zlib-1.2.8
   - cmake --build .
