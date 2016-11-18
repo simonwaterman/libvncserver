@@ -7,7 +7,6 @@ install:
   - mkdir deps
   - cd deps
   # Zlib
-  - cd deps
   - appveyor DownloadFile https://github.com/madler/zlib/archive/v1.2.8.tar.gz
   - 7z x v1.2.8.tar.gz -so | 7z x -si -ttar > nul
   - move zlib-1.2.8 zlib
