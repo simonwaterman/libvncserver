@@ -3,8 +3,19 @@ os:
   - Visual Studio 2013
   - Visual Studio 2015
 
+install:
+  - cd \
+  # Zlib
+  - appveyor DownloadFile https://github.com/madler/zlib/archive/v1.2.8.tar.gz
+  - 7z x v1.2.8.tar.gz -so | 7z x -si -ttar > nul
+  - cd zlib-1.2.8
+  - cmake .
+  - cmake --build .
+  - cd ..
+
+
 build_script:
-  - md build
+  - mkdir build
   - cd build 
   - cmake ..
   - cmake --build .
