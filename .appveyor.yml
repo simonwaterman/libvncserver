@@ -13,6 +13,7 @@ install:
   - cmake .
   - cmake --build .
   - cd ..
+  - cd ..
 
 
 build_script:
