@@ -15,7 +15,6 @@ install:
   - cmake --build .
   - cd ..
   # libPNG
-  - cd deps
   - appveyor DownloadFile ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.26.tar.gz
   - 7z x libpng-1.6.26.tar.gz -so | 7z x -si -ttar > nul
   - move libpng-1.6.26 libpng
