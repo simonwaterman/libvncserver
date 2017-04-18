@@ -11,6 +11,7 @@ compiler:
   - clang
 
 before_install:
+- 'if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew uninstall openssl && brew install openssl --universal --without-test; fi'
 - 'if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then export CFLAGS="-I/usr/local/opt/openssl/include $CFLAGS" LDFLAGS="-L/usr/local/opt/openssl/lib $LDFLAGS"; fi'
 - |
   if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
