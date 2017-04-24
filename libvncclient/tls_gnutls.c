@@ -52,7 +52,7 @@ InitializeTLS(void)
     rfbClientLog("Failed to initialized GnuTLS: %s.\n", gnutls_strerror(ret));
     return FALSE;
   }
-  rfbClientLog("GnuTLS initialized.\n");
+  rfbClientLog("GnuTLS version %s initialized.\n", gnutls_check_version(NULL));
   rfbTLSInitialized = TRUE;
   return TRUE;
 }
